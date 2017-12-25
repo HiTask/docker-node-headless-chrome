@@ -21,16 +21,13 @@ RUN apt-get update -y && \
 		lsb-release \
 		wget \
 		curl \
+		zip \
 		xz-utils -y --no-install-recommends && \
 	wget https://dl.google.com/linux/direct/google-chrome-unstable_current_amd64.deb && \
 	dpkg -i google-chrome*.deb && \
 	apt-get install -f && \
 	apt-get clean autoclean && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* google-chrome-unstable_current_amd64.deb
-
-
-# Install zip utility
-RUN apt-get install zip -y
 
 
 # Install nodejs
