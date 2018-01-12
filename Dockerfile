@@ -1,4 +1,4 @@
-FROM node:9.3
+FROM node:8.9
 
 # Install basic tools/utilities and google Chrome unstable (which has cross platform support for headless mode). Combining them together so that apt cache cleanup would need to be done just once.
 RUN apt-get update -y && \
